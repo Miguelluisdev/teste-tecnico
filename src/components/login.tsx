@@ -50,6 +50,7 @@ export const Login = () => {
               onClick={togglePasswordVisibility}
               className={style.passwordToggle}
               aria-label={isPasswordVisible ? "Ocultar senha" : "Mostrar senha"}
+              title={isPasswordVisible ? "Ocultar senha" : "Mostrar senha"}
             >
               {isPasswordVisible ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
@@ -58,7 +59,12 @@ export const Login = () => {
             <span className={style.errorInput}>{errors.password.message}</span>
           )}
         </div>
-        <Link href="/forgot" className={style.forgotLink}>
+        <Link
+          href="/forgot"
+          rel="noopener noreferrer"
+          className={style.forgotLink}
+          title="Recuperar sua senha"
+        >
           Esqueceu a senha?
         </Link>
         <button
@@ -69,7 +75,17 @@ export const Login = () => {
           {!isSubmitting ? "Logar" : "Entrando..."}
         </button>
         <div className={style.signupLink}>
-          <Link href="/sign-up">Não possui conta? Criar conta</Link>
+          <Link href="/sign-up" rel="noopener noreferrer" title="Criar a conta">
+            Não possui conta? Criar conta
+          </Link>
+        </div>
+
+        <div className={style.termsContainer}>
+          <span>
+            Ao fazer login, você concorda com nossos{" "}
+            <Link href="/terms-of-service">Termos de Serviço</Link> e{" "}
+            <Link href="/privacy-policy">Política de Privacidade</Link>.
+          </span>
         </div>
       </form>
     </section>

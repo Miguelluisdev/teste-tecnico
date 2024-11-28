@@ -10,7 +10,7 @@ export default function Home() {
       <aside className={styles.imageSection}>
         <Image
           src="/login.jpg"
-          alt="Imagem ilustrativa"
+          alt="Imagem do login"
           width={1920}
           height={1080}
           className={styles.image}
