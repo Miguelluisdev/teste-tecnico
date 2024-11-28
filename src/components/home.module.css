@@ -1,0 +1,185 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginForm {
+  width: 384px;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loginHeader h2 {
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f3473;
+  text-align: center;
+}
+
+.loginHeader p {
+  color: #555;
+  text-align: center;
+  font-size: large;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.formGroup input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.formGroup input:not(:placeholder-shown) {
+  border-color: #050e28;
+  background-color: #eef2ff;
+}
+
+.formGroup input:not(:placeholder-shown):focus {
+  border-color: #050e28;
+  box-shadow: 0 0 4px #1f3473;
+}
+
+.formGroup input:focus {
+  border-color: #1f3473;
+  outline: none;
+}
+
+.forgotLink {
+  align-self: flex-end;
+  font-size: 16px;
+  color: #1f3473;
+  text-decoration: none;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.loginButton {
+  padding: 8px;
+  font-size: 16px;
+  color: white;
+  background-color: #121313;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #1f3473;
+}
+
+.signupLink {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.signupLink a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #1f3473;
+  text-decoration: none;
+}
+
+.signupLink a:hover {
+  text-decoration: underline;
+}
+
+.passwordWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.passwordWrapper input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passwordToggle:hover {
+  color: #1f3473;
+}
+
+.errorInput {
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .imageSection {
+    display: none;
+  }
+
+  .loginSection {
+    flex: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
