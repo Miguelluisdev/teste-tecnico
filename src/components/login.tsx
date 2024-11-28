@@ -33,7 +33,9 @@ export const Login = () => {
             {...register("email")}
           />
           {errors.email && (
-            <span className={style.errorInput}>{errors.email.message}</span>
+            <span role="alert" className={style.errorInput}>
+              {errors.email.message}
+            </span>
           )}
         </div>
         <div className={style.formGroup}>
@@ -56,7 +58,9 @@ export const Login = () => {
             </button>
           </div>
           {errors.password && (
-            <span className={style.errorInput}>{errors.password.message}</span>
+            <span role="alert" className={style.errorInput}>
+              {errors.password.message}
+            </span>
           )}
         </div>
         <Link
